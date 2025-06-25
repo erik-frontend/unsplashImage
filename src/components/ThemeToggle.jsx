@@ -1,8 +1,20 @@
 import React from 'react'
+import { useGlobalContext } from './context'
+import { IoMdSunny, IoMdMoon } from "react-icons/io";
 
 const ThemeToggle = () => {
+
+  const { isDarkTheme, toggleDarkTheme } = useGlobalContext()
+
   return (
-    <div>ThemeToggle</div>
+    <section className="toggle-container">
+      <button className="dark-toggle" onClick={toggleDarkTheme}>
+        {isDarkTheme ?
+          (<IoMdMoon className="toggle-icon" />) :
+          (<IoMdSunny className="toggle-icon" />)
+        }
+      </button>
+    </section>
   )
 }
 
