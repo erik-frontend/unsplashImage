@@ -77,6 +77,13 @@ body {
     color: var(--textColor);
 }
 
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --textColor: var(--dark-mode-text-color);
+    --backgroundColor: var(--dark-mode-bg-color);
+  }
+} */
+
 #root {
     display: flex;
     flex-direction: column;
@@ -223,4 +230,10 @@ ul {
 .search-form .btn:hover {
     background: var(--primary-300);
     color: var(--black);
+}
+
+.title {
+    text-align: center;
+    color: var(--primary-500);
+    font-size: clamp(2rem, 5vw, 5rem);
 }
